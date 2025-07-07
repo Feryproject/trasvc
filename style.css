@@ -1,0 +1,182 @@
+/* RESET & GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: #000;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
+  background: url("img/prestasi/1.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #00bfff;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #111;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* KARTU PEMAIN */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card h3 {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.card-info {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.card-info p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+/* GALERI */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.galeri-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* PRESTASI */
+.prestasi-img {
+  max-width: 80%;
+  margin-top: 1rem;
+  border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.bg-section {
+  background: url("img/prestasi/2.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.logo-tras {
+  width: 100px;
+  height: auto;
+  margin: 1rem 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Tambahan animasi ringan */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
